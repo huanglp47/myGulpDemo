@@ -1,0 +1,22 @@
+<%host=""%>
+<%v="?v=1.0"%>
+<%source=""%>
+<%if(query&&query.source){%>
+<%source='source='+query.source%>
+<%}%>
+<meta charset="utf-8">
+<%if(keyword){%>
+<meta content="<%=keyword%>" name="keywords"/>
+<%}%>
+<%if(description){%>
+    <meta content="<%=description%>" name="description"/>
+<%}%>
+<link type="image/x-icon" href="/images/favicon.ico" rel="Shortcut Icon"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" />
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="format-detection" content="telephone=no" />
+<!--<link rel='stylesheet' href='/css/base.css' type="text/css"/>-->
+<!--<link rel='stylesheet' href='/css/layout.css' type="text/css" />-->
+
+<link rel='stylesheet' href='/css/all_common.css' type="text/css" />

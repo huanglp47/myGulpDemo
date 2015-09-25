@@ -1,0 +1,571 @@
+﻿#fp-nav ul li a span, .fp-slidesNav ul li a span{
+    border:1px solid #fff;
+    background:transparent;;
+}
+#fp-nav ul li a.active span, .fp-slidesNav ul li a.active span{
+    background:#fff;
+}
+.section h4{font-size:20px;}
+.player-mini{
+    display: none!important;
+}
+article{
+    height: 100%!important;
+}
+.download-section1{
+    background-color:#53ba9c!important;
+    color:#fff;
+}
+.download-animate1{
+    width:260px;
+    margin:0px auto;
+}
+.download-section1 .btn{
+    -webkit-transform:scale(3) translateY(-40px);
+    transform:scale(3) translateY(-40px);
+    opacity: 0;
+}
+.download-section1.active .btn{
+    -webkit-transform:scale(1);
+    transform:scale(1);
+    opacity: 1;
+    -webkit-transition:all 0.5s ease 1.2s;
+    transition:all 0.5s ease 1.5s;
+}
+.download-logo{
+    position: absolute;
+    left:50%;
+    top:50%;
+    -webkit-transform:translate(-50%,-50%);
+    transform:translate(-50%,-50%);
+    width:80px;
+    height:77px;
+    margin-left:-5px;
+    margin-top:-40px;
+    opacity: 0;
+    background:url('../images/animate/download/01/logo.png') no-repeat center;
+    background-size: 100%;
+    -webkit-transition:all 0.4s ease 1.4s;
+    transition:all 0.4s ease 1.4s;
+}
+.download-section1.active .download-logo{
+    opacity:1;
+}
+.download-phone{
+    -webkit-transform:translateY(50px);
+    transform:translateY(50px);
+    opacity: 0;
+    width:140px;
+    height:250px;
+    background:url('../images/animate/download/01/phone.png') no-repeat center;
+    background-size: 100%;
+    margin:0px auto 20px auto;
+    -webkit-transition:all 0.4s ease 1s;
+    transition:all 0.4s ease 1s;
+}
+.active .download-phone{
+    -webkit-transform:translateY(0px);
+    transform:translateY(0px);
+    opacity: 1;
+}
+.download-section2{
+    background-color:#53ba9c!important;
+    color:#fff;
+}
+.download-section2 .btn{
+    margin-bottom:2px;
+    padding:14px 0px;
+}
+.download-section2 div{
+    -webkit-transform:scale(0.2);
+    transform:scale(0.2);
+    -webkit-transition:all 0.4s ease 0.3s;
+    transition:all 0.4s ease 0.3s;
+}
+.download-section2.active div{
+    -webkit-transform:scale(1);
+    transform:scale(1);
+}
+.download-section2 .btn span{
+    display:inline-block;
+}
+.download-section2 .btn .tl{
+    text-align: left;
+    font-size:19px;
+    vertical-align: middle;
+}
+.download-section2 img{
+    width:auto!important;
+    height:60px!important;
+}
+.download-section3{
+    background-color:#db3736!important;
+    color:#fff;
+}
+.book1,.book2,.book3,.book4,.book5,.book6,.book7{
+    background:url('../images/animate/download/03/01.png') no-repeat center;
+    position: absolute;
+    left:10px;
+    top:0px;
+    height:50px;
+    width:50px;
+    background-size:100%;
+    opacity: 0;
+}
+.book1{
+    height:50px;
+    width:50px;
+    -webkit-transition:opacity 0.3s ease 0.5s;
+    transition:opacity 0.3s ease 0.5s;
+}
+.book2{
+    background-image:url('../images/animate/download/03/02.png');
+    left:140px;
+    top:-10px;
+    -webkit-transition:opacity 0.3s ease 0.6s;
+    transition:opacity 0.3s ease 0.6s;
+}
+.book3{
+    background-image:url('../images/animate/download/03/03.png');
+    left: auto;
+    top: 95px;
+    right: 106px;;
+    -webkit-transition:opacity 0.3s ease 0.7s;
+    transition:opacity 0.3s ease 0.7s;
+    width:45px;
+    height:45px;
+}
+.book4{
+    background-image:url('../images/animate/download/03/04.png');
+    left: auto;
+    top: 15px;
+    right: 9px;
+    -webkit-transition:opacity 0.3s ease 0.8s;
+    transition:opacity 0.3s ease 0.8s;
+}
+.book5{
+    background-image:url('../images/animate/download/03/05.png');
+    right: 45px;
+    left: auto;
+    top: 58px;
+    height:60px;
+    width:60px;
+    -webkit-transition:opacity 0.3s ease 0.9s;
+    transition:opacity 0.3s ease 0.9s;
+}
+.book6{
+    background-image:url('../images/animate/download/03/06.png');
+    left: 80px;
+    top: 20px;
+    height:40px;
+    width:40px;
+    -webkit-transition:opacity 0.3s ease 1s;
+    transition:opacity 0.3s ease 1s;
+}
+.book7{
+    background-image:url('../images/animate/download/03/07.png');
+    left: 32px;
+    top: 65px;
+    height:70px;
+    width:70px;
+    -webkit-transition:opacity 0.3s ease 1.1s;
+    transition:opacity 0.3s ease 1.1s;
+}
+.active .book1,
+.active .book2,
+.active .book3,
+.active .book4,
+.active .book5,
+.active .book6,
+.active .book7{
+    opacity: 1;
+}
+.gear1{
+    background:url('../images/animate/download/03/a1.png') no-repeat center;
+    width:60px;
+    height:60px;
+    position:absolute;
+    bottom:-12px;
+    left:50%;
+    background-size: 100%;
+    margin-left:-30px;
+    -webkit-animation:rotate 3s infinite linear;
+    animation:rotate 3s infinite linear;
+ }
+.gear2{
+    background:url('../images/animate/download/03/a2.png') no-repeat center;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 28px;
+    right: 62px;
+    background-size: 100%;
+    -webkit-animation:rotate 3s infinite linear;
+    animation:rotate 3s infinite linear;
+}
+@-webkit-keyframes rotate {
+    from {
+        -webkit-transform:rotate(0deg);
+    }
+    to {
+        -webkit-transform:rotate(360deg);
+    }
+}
+@keyframes rotate {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+.box-yellow{
+    background:url('../images/animate/download/03/c.png') no-repeat center;
+    position: absolute;
+    width:134px;
+    left:50%;
+    margin-left:-65px;
+    bottom:-60px;
+    height:60px;
+    background-size:100%;
+}
+.download-animate3{
+    background:url('../images/animate/download/03/b1.png') no-repeat center;
+    height:200px;
+    background-size: auto 200px;
+    position: relative;
+    width:260px;
+    margin:30px auto 80px auto;
+}
+.download-animate4 {
+    position: relative;
+    width:260px;
+    margin:20px auto;
+}
+.material05{
+    background:url('../images/animate/download/04/02.png') no-repeat center;
+    height:260px;
+    background-size: auto 260px;
+    position: relative;
+    z-index: 10;
+}
+.material01{
+    position: absolute;
+    bottom:65px;
+    width:55px;
+    height:55px;
+    background:url('../images/animate/download/04/05.png') no-repeat center;
+    -webkit-transform:translateX(-50%);
+    transform:translateX(-50%);
+    background-size: 100%;
+    left:50%;
+    z-index: 12;
+    opacity: 0;
+    -webkit-transition:all 0.3s ease 0.5s;
+    transition:all 0.3s ease 0.5s;
+}
+.active .material01{
+    bottom:55px;
+    opacity: 1;
+}
+.material02{
+    position: absolute;
+    bottom:100%;
+    width:57px;
+    height:70px;
+    background:url('../images/animate/download/04/01.png') no-repeat center;
+    -webkit-transform:translateX(-50%);
+    transform:translateX(-50%);
+    background-size: 100%;
+    left:50%;
+    z-index: 12;
+    opacity: 0;
+    -webkit-transition:all 0.6s ease 1s;
+    transition:all 0.6s ease 1s;
+}
+.active .material02{
+    bottom:80px;
+    opacity: 1;
+}
+.material03{
+    position: absolute;
+    bottom:100%;
+    width:60px;
+    height:135px;
+    background:url('../images/animate/download/04/03.png') no-repeat center;
+    -webkit-transform:translateX(-50%);
+    transform:translateX(-50%);
+    background-size: 100%;
+    left:0%;
+    bottom:0;
+    z-index: 12;
+    -webkit-transition:left 0.8s ease 0.5s,opacity 0.8s ease 0.8s;
+    transition:left 0.8s ease 0.5s,opacity 0.8s ease 0.8s;
+    opacity: 0;
+    margin-left:-70px;
+}
+.active .material03{
+    left:50%;
+    opacity: 1;
+}
+.material04{
+    position: absolute;
+    bottom:100%;
+    width:100px;
+    height:120px;
+    background:url('../images/animate/download/04/04.png') no-repeat center;
+    -webkit-transform:translateX(50%);
+    transform:translateX(50%);
+    background-size: 100%;
+    bottom:0px;
+    right:0%;
+    z-index: 9;
+    -webkit-transition:right 0.8s ease 0.5s,opacity 0.8s ease 0.8s;
+    transition:right 0.8s ease 0.5s,opacity 0.8s ease 0.8s;
+    opacity: 0;
+    margin-right:-80px;
+}
+.active .material04{
+    right:50%;
+    opacity: 1;
+}
+.download-animate5{
+    position:relative;
+    width:260px;
+    margin:130px auto 0 auto;
+}
+.material06{
+    background:url('../images/animate/download/05/01.png') no-repeat center;
+    height:135px;
+    background-size: 100%;
+    position: relative;
+    z-index: 10;
+    width:220px;
+    margin:0px auto;
+}
+.material07{
+    background:url('../images/animate/download/05/02.png') no-repeat center;
+    height:50px;
+    background-size: 100%;
+    position: absolute;
+    z-index: 11;
+    width:50px;
+    left: 15px;
+    top: -20px;
+}
+.material08{
+    background:url('../images/animate/download/05/03.png') no-repeat center;
+    height:50px;
+    background-size: 100%;
+    position: absolute;
+    z-index: 9;
+    width:50px;
+    left: 42px;
+    top: 50px;
+    -webkit-transition:all 0.4s ease 0.5s;
+    transition:all 0.4s ease 0.5s;
+}
+.active .material08{
+    left:-8px;
+}
+.material09{
+    background:url('../images/animate/download/05/04.png') no-repeat center;
+    height:50px;
+    background-size: 100%;
+    position: absolute;
+    z-index: 9;
+    width:50px;
+    right: 42px;
+    top: 10px;
+    -webkit-transition:all 0.4s ease 0.5s;
+    transition:all 0.4s ease 0.5s;
+}
+.active .material09{
+    right:-8px;
+}
+.material10{
+     background:url('../images/animate/download/05/05.png') no-repeat center;
+     height:18px;
+     background-size: 100%;
+     position: absolute;
+     z-index: 10;
+     width:18px;
+     left: 108px;
+     top: -105px;
+     opacity: 0;
+ }
+.active .material10{
+    -webkit-animation:opacity1 1s infinite linear 1.6s;
+    animation:opacity1 1s infinite linear 1.6s;
+}
+@-webkit-keyframes opacity1 {
+    from {
+        opacity: 0;
+        -webkit-transform:scale(0.2);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform:scale(1);
+    }
+}
+@keyframes opacity1 {
+    from {
+        opacity: 0;
+        transform:scale(0.2)
+    }
+    to {
+        opacity: 1;
+        transform:scale(1)
+    }
+}
+.material11{
+    background:url('../images/animate/download/05/06.png') no-repeat center;
+    height:18px;
+    background-size: 80%;
+    position: absolute;
+    z-index: 10;
+    width:18px;
+    left: 130px;
+    top: -124px;
+    opacity: 0;
+    -webkit-transition:all 0.5s ease 1.6s;
+    transition:all 0.5s ease 1.6s;
+}
+.active .material11{
+    opacity: 1;
+}
+.material12{
+    background:url('../images/animate/download/05/07.png') no-repeat center;
+    height:50px;
+    background-size: 100%;
+    position: absolute;
+    z-index: 9;
+    width:50px;
+    left: 23px;
+    top: -35px;
+}
+
+.material13{
+    background:url('../images/animate/download/05/08.png') no-repeat center;
+    height: 160px;
+    background-size: 100%;
+    position: absolute;
+    z-index: 12;
+    width: 60px;
+    left: 99px;
+    top: 100%;
+    opacity:0;
+    -webkit-transition:all 0.6s ease 0.8s;
+    transition:all 0.6s ease 0.8s;
+}
+.active .material13{
+    top: -83px;
+    opacity:1;
+}
+.download-animate6{
+    background:url('../images/animate/download/06/01.png?v=1') no-repeat center bottom;
+    width:260px;
+    margin:30px auto;
+    height:300px;
+    background-size: 100%;
+    position: relative;
+}
+.material14{
+    background:url('../images/animate/download/06/03.png') no-repeat center;
+    width: 150px;
+    height: 114px;
+    background-size:100%;
+    position: absolute;
+    left:50%;
+    -webkit-transform:translateX(-50%);
+    transform:translateX(-50%);
+    top: 0;
+    -webkit-transition:all 0.5s ease 0.5s;
+    transition:all 0.5s ease 0.5s;
+    opacity: 0;
+}
+.active .material14{
+    top:107px;
+    opacity: 1;
+}
+.material15{
+    background:url('../images/animate/download/06/02.png') no-repeat center;
+    width: 50px;
+    height: 60px;
+    background-size:100%;
+    position: absolute;
+    left:50%;
+    -webkit-transform:translateX(-50%);
+    transform:translateX(-50%);
+    top:145px;
+    -webkit-transition:all 0.5s ease 1s;
+    transition:all 0.5s ease 1s;
+    opacity: 0;
+    z-index: 10;
+}
+.active .material15{
+    top:60px;
+    opacity: 1;
+}
+.material16{
+    background:url('../images/animate/download/06/04.png') no-repeat center;
+    width: 230px;
+    height: 200px;
+    background-size: 100%;
+    position: absolute;
+    left: 0px;
+    top: 10px;
+    -webkit-transform:translateY(-10px);
+    transform:translateY(-10px);
+    -webkit-transition:all 0.5s ease 1.5s;
+    transition:all 0.5s ease 1.5s;
+    opacity: 0;
+    z-index: 1;
+}
+.active .material16{
+    opacity: 1;
+}
+.material17{
+    background:url('../images/animate/download/06/05.png') no-repeat center;
+    width: 40px;
+    height:40px;
+    background-size:100%;
+    position: absolute;
+    left: 30px;
+    top: 15px;
+    -webkit-transform:translateY(-10px);
+    transform:translateY(-10px);
+    -webkit-transition:all 0.5s ease 1.5s;
+    transition:all 0.5s ease 1.5s;
+    opacity: 0;
+    z-index: 1;
+}
+.active .material17{
+    opacity: 1;
+}
+.download-section4{
+    background-color:#F2BF40!important;
+    color:#fff;
+}
+.download-section5{
+    background-color:#5C9BD1!important;
+    color:#fff;
+}
+.download-section6{
+    background-color:#A646EE!important;
+    color:#fff;
+}
+.download-section4 img{
+    width:240px;
+    margin-top:40px;
+}
+.download-section5 img{
+    width:320px;
+}
+/*原来1.2倍在QQ，新浪webview异常*/
+@media screen and (min-width: 380px){
+    .fp-tableCell{
+        -webkit-transform:scale(1.1);
+        transform:scale(1.1);
+    }
+}

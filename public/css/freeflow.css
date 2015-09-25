@@ -1,0 +1,192 @@
+﻿
+.freeflow-banner{
+    width: 100%;
+    text-align: center;
+    /*height: 160px;*/
+    /*background: #dcdcdc;*/
+    /*background: url('../images/freeflow/freeflow_banner.jpg');*/
+    /*background-size: cover;*/
+}
+.freeflow-banner img{
+    width: 100%;
+}
+.freeflow-orange{
+    color: #fb6c2b;
+}
+.freeflow-title{
+    font-size: 13px;
+    color: #b1b1b1;
+    padding-top: 10px;
+    /*padding-bottom: 5px;*/
+}
+.freeflow-banner-title{
+    line-height: 160px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+    display: none;
+}
+.freeflow-title-unline{
+    position: relative;
+    margin: 16px 0px;
+}
+.freeflow-title-unline:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    top: 12px;
+    left: 0px;
+    border-bottom: 1px solid #dee2e5;
+}
+.freeflow-title-unline h4 {
+    display: inline-block;
+    background: #fc6520;
+    color: #fff;
+    line-height: 23px;
+    padding: 1px 0.6rem 0px 0.6rem;
+    position: relative;
+    border-radius: 5em;
+    -webkit-border-radius: 5em;
+    margin-top: 0;
+    z-index: 10;
+}
+.freeflow-qAnda-div{
+    margin-top: 10px;
+}
+#freeflow_activation, #freeflow_qAnda{
+    color: #fb6c2b;
+}
+.freeflow-notice-ol{
+    list-style-type: decimal;
+    list-style-position: inside;
+}
+.freeflow-notice-ol li{
+     color: #878787;
+ }
+
+/*订购成功页*/
+.freeflow-check-info{
+    color: #5b9cd8;
+    background: #fff;
+    border-radius: 5px;
+    line-height: 2.47rem;
+    text-align: center;
+    display: block;
+    border:1px solid rgba(0,0,0,0.1);
+}
+.freeflow-submit-div{
+    color: #fff;
+    margin: 15px 0;
+}
+.freeflow-submit-button{
+    border-radius: 5px;
+    line-height: 2.42rem;
+    text-align: center;
+    display: block;
+    background: #fb6c2b;
+    /*font-weight: 700;*/
+}
+#freeflow_info_num{
+    color: #fb6c2b;
+}
+.freeflow-tips{
+    color: #878787;
+    margin-bottom: 5px;
+}
+
+/*问题详情页*/
+.freeflow-question-main h1{
+    font-weight: 700;
+    font-size: 14px;
+}
+.freeflow-question-main p{
+    font-weight: 400;
+    color: #666;
+}
+
+/*退订页*/
+.ff-gray{
+    color: #b1b1b1;
+}
+#ff_white{
+    color: #fff;
+}
+.ff-gray333{
+    color: #333;
+}
+.freeflow-nobackground{
+    background: none;
+}
+.ff-unsubscribe-ul{
+    border: 1px solid #dee2e5;
+    background: #fff;
+    padding: 0 20px;
+}
+.ff-unsubscribe-ul li{
+    height: 35px;
+    line-height: 35px;
+    border-bottom: 1px solid #dee2e5;
+    color: #666;
+}
+.ff-unsubscribe-ul li:nth-last-of-type(1){
+    border-bottom: none
+}
+.ff-unsubscribe-icon-right{
+    background: url('../images/freeflow/unsubscribe-uncheck-icon.png') no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-top: 10px;
+}
+.ff-unsubscribe-selected{
+    background: url('../images/freeflow/unsubscribe-check-icon.png') no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-top: 10px;
+}
+#ff_check_info, #ff_continue_use{
+    color: #fb6c2b;
+}
+
+/*详情页*/
+.ff-detail-ul{
+    border: 1px solid #dee2e5;
+    background: #fff;
+}
+.ff-detail-ul li{
+    height: 35px;
+    line-height: 35px;
+    border-bottom: 1px solid #dee2e5;
+    color: #666;
+    padding: 0 10px;
+}
+.ff-detail-ul li:nth-last-of-type(1){
+    border-bottom: none
+}
+.detail-unsubscribe-button{
+    display: block;
+    height: 35px;
+    line-height: 35px;
+    background: #ddd;
+    text-align: center;
+    color: #fff!important;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+/*开通失败详情页*/
+.detail-subscribe-fail-button{
+    display: block;
+    height: 35px;
+    line-height: 35px;
+    background: #ddd;
+    text-align: center;
+    color: #fff!important;
+    background: #fb6c2b;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+}

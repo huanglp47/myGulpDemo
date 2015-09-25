@@ -1,0 +1,215 @@
+﻿.anchor-service p{
+    padding:10px;
+}
+.anchor-service img{
+    width:100%;
+}
+.fullpage{
+    text-align: center;
+}
+.fullpage h4{
+    font-size: 20px;
+}
+.section-image{
+    width:180px;
+}
+.section-image210{
+    width:210px;
+}
+.fullpage .section p{
+    margin-bottom:10px;
+}
+.fullpage .section{
+    padding:0px 30px;
+    background:#F2F3F6;
+}
+.fullpage-arrow{
+    position: fixed;
+    left:50%;
+    bottom:10px;
+    margin-left:-15px;
+    z-index: 999;
+}
+.fullpage-arrow i{
+    color:#ddd;
+    font-size:30px;
+    -webkit-transition:color 0.2s ease 0s;
+    -ms-transition:color 0.2s ease 0s;
+    -moz-transition:color 0.2s ease 0s;
+    transition:color 0.2s ease 0s;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+    -webkit-animation-name:arrow;/*动画属性名，也就是我们前面keyframes定义的动画名*/
+    -webkit-animation-duration: 0.6s;/*动画持续时间*/
+    -webkit-animation-timing-function: ease-in-out; /*动画频率，和transition-timing-function是一样的*/
+    -webkit-animation-delay: 0s;/*动画延迟时间*/
+    -webkit-animation-iteration-count: infinite;/*定义循环资料，infinite为无限次*/
+    -webkit-animation-direction: alternate;/*定义动画方式*/
+    -moz-animation-name:arrow;/*动画属性名，也就是我们前面keyframes定义的动画名*/
+    -moz-animation-duration: 0.6s;/*动画持续时间*/
+    -moz-animation-timing-function: ease-in-out; /*动画频率，和transition-timing-function是一样的*/
+    -moz-animation-delay: 0s;/*动画延迟时间*/
+    -moz-animation-iteration-count: infinite;/*定义循环资料，infinite为无限次*/
+    -moz-animation-direction: alternate;/*定义动画方式*/
+}
+.fullpage-arrow i.light{
+    color:#fff;
+}
+#fp-nav.right{
+    right:8px;
+}
+#fp-nav ul li a span, .fp-slidesNav ul li a span{
+    border:0;
+    background:#c5c5c7;
+}
+#fp-nav ul li a.active span, .fp-slidesNav ul li a.active span{
+    background:#fc6520;
+}
+#fp-nav ul li, .fp-slidesNav ul li{
+    margin:2px 4px;
+}
+.btn-wrapper .btn{
+    color:#53ba9c;
+    border:0px;
+    background:#fff;
+    margin:0px 15px;
+}
+.btn-wrapper .btn img{
+    width:21px;
+    margin:0px 10px 0px 0px;
+}
+.fullpage img.download-image1{
+    width:auto;
+    height:250px;
+    margin-bottom:15px;
+}
+.download-section1{
+    background-color:#53ba9c!important;
+    color:#fff;
+}
+.download-section1 .btn{
+    transform:scale(3);
+    opacity: 0;
+}
+.download-section1.full_active .btn{
+    transform:scale(1);
+    transition:all 0.5s ease 0.5s;
+    opacity: 1;
+}
+.download-logo{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    width:80px;
+    margin-left:-5px;
+    margin-top:-20px;
+    opacity: 0;
+    transition:opacity 1.2s ease 1s;
+}
+.download-section1.full_active .download-logo{
+    opacity:1;
+}
+.download-section1 .download-image1{
+    transform:translateY(50px);
+    transition:all 0.5s ease 0.1s;
+    opacity: 0.5;
+}
+.download-section1.full_active .download-image1{
+    transform:translateY(0px);
+    opacity: 1;
+}
+.download-section2{
+    background-color:#53ba9c!important;
+    color:#fff;
+}
+.download-section2 .btn{
+    margin-bottom:2px;
+    padding:14px 0px;
+}
+.download-section2 div{
+    transform:scale(0.2);
+    transition:transform 0.4s ease-in-out 0.3s;
+}
+.download-section2.active div{
+    transform:scale(1);
+}
+.download-section2 .btn span{
+    display:inline-block;
+}
+.download-section2 .btn .tl{
+    text-align: left;
+    font-size:19px;
+    vertical-align: middle;
+}
+.download-section2 img{
+    width:auto!important;
+    height:60px!important;
+}
+.download-section3{
+    background-color:#db3736!important;
+    color:#fff;
+}
+
+.download-section4{
+    background-color:#F2BF40!important;
+    color:#fff;
+}
+.download-section5{
+    background-color:#5C9BD1!important;
+    color:#fff;
+}
+.download-section6{
+    background-color:#A646EE!important;
+    color:#fff;
+}
+.download-section4 img{
+    width:240px;
+    margin-top:40px;
+}
+.download-section5 img{
+    width:320px;
+}
+@media screen and (min-width:360px) {
+    .section-image{
+        width:240px;
+    }
+    .section-image210{
+        width:270px;
+    }
+    .fullpage .section p{
+        margin-bottom:20px;
+    }
+}
+@-webkit-keyframes arrow{
+    0%{
+        opacity: 1;
+    }
+    70%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@-moz-keyframes arrow{
+    0%{
+        opacity: 1;
+    }
+    70%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+ }
+@keyframes arrow{
+    0%{
+        opacity: 1;
+    }
+    70%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+}
