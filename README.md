@@ -31,17 +31,17 @@ This is a demo for gulp <br>
 npm install <br> 
 由于不想静态资源服务器文件冗余，顾由a_sdf10de34.js改为a?v=sdf10de34，因此得修改gulp-rev,gulp-rev-collector两个插件源代码<br> <br> 
 
-打开 node_modules\gulp-rev\index.js
-第133行 manifest[originalFile] = revisionedFile; 
-更新为: manifest[originalFile] = originalFile + '?v=' + file.revHash;
+打开 node_modules\gulp-rev\index.js  <br> 
+第133行 manifest[originalFile] = revisionedFile; <br> 
+更新为: manifest[originalFile] = originalFile + '?v=' + file.revHash;<br> <br> 
 
-打开 nodemodules\gulp-rev\nodemodules\rev-path\index.js
-10行 return filename + '-' + hash + ext; 
-更新为: return filename + ext;
+打开 nodemodules\gulp-rev\nodemodules\rev-path\index.js<br> 
+10行 return filename + '-' + hash + ext;<br> 
+更新为: return filename + ext;<br> <br> 
 
-打开 node_modules\gulp-rev-collector\index.js
-31行 if ( path.basename(json[key]).replace(new RegExp( opts.revSuffix ), '' ) !== path.basename(key) ) { 
-更新为: if ( path.basename(json[key]).split('?')[0] !== path.basename(key) ) {
+打开 node_modules\gulp-rev-collector\index.js<br> 
+31行 if ( path.basename(json[key]).replace(new RegExp( opts.revSuffix ), '' ) !== path.basename(key) ) {<br> 
+更新为: if ( path.basename(json[key]).split('?')[0] !== path.basename(key) ) {<br> <br> 
 
 2.输入： gulp  <br> 
 3.OK，构建结束 <br> <br> 
