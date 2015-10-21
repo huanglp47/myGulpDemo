@@ -32,7 +32,7 @@ npm install <br>
 由于不想静态资源服务器文件冗余，顾由a_sdf10de34.js改为a?v=sdf10de34，因此得修改gulp-rev,gulp-rev-collector两个插件源代码<br> <br> 
 
 打开 node_modules\gulp-rev\index.js  <br> 
-第133行 manifest[originalFile] = revisionedFile; <br> 
+第143行 manifest[originalFile] = revisionedFile; <br> 
 更新为: manifest[originalFile] = originalFile + '?v=' + file.revHash;<br> <br> 
 
 打开 nodemodules\gulp-rev\nodemodules\rev-path\index.js<br> 
