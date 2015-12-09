@@ -1,7 +1,8 @@
 # myGulpDemo<br> 
 This is a demo for gulp <br> 
 构建结果见图 gulp_result.png <br>
-![image](https://github.com/huanglp47/myGulpProject/blob/master/gulp_result.png)
+![image](https://github.com/huanglp47/myGulpProject/blob/master/gulp_result.png)  
+
 这是基于gulp的前端自动化工程demo，主要解决我们wap网站的以下问题：<br> 
 1.静态资源压缩。<br> 
 2. cdn加速及缓存解决。<br> 
