@@ -48,7 +48,8 @@ npm install <br>
 
 关于生产环境与开发环境的切换问题。通过config.js _cdnPrefix参数设置：<br> 
 exports._cdnPrefix = 'http://hlpassets.demo.com';<br> 
-如下图所示：
+如下图所示：  
+
 ![image](https://github.com/huanglp47/myGulpProject/blob/master/gulp_result.png)
 
 
