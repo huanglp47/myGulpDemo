@@ -9,8 +9,8 @@ edit: 2016-03-24<br>
 uglify({<br> 
             mangle: {except: ['define', 'require', 'module', 'exports']}<br> 
             //mangle: {except: ["require"]}<br> 
-        })<br> 
-2.使用gulp-rename复制文件，文件转移到dist生产目录<br> 
+        })<br>2.使用gulp-rename复制文件，文件转移到dist生产目录<br> 
+        
 ------------------------------------------------------------
 这是基于gulp的前端自动化工程demo，主要解决我们wap网站的以下问题：<br> 
 1.静态资源压缩。<br> 
