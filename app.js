@@ -49,7 +49,8 @@ app.use(log4js.connectLogger(this.logger('normal'),{level:'auto',format:':method
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+// app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'dist')));
 
 var bookstore = require('./routes/bookstore');
 app.use('/', bookstore);

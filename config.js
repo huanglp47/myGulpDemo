@@ -5,5 +5,5 @@ exports.logLevel='INFO';
 exports.token='';
 
 //CDN
- exports._cdnPrefix = 'http://hlpassets.demo.com';
-//exports._cdnPrefix = '';
+ // exports._cdnPrefix = 'http://hlpassets.demo.com';
+exports._cdnPrefix = '';

@@ -11,6 +11,10 @@ var clean = require('gulp-clean');
 var utf8Convert = require('gulp-utf8-convert');
 var revCollector = require('gulp-rev-collector');
 var jshint=require('gulp-jshint');
+var cmdPack = require('gulp-cmd-pack');
+var rename = require('gulp-rename');
+
+//var spriter = require('gulp-css-spriter');
 
 var cfg= require('./config.js');
 var _cdnPrefix = cfg._cdnPrefix;
@@ -19,43 +23,51 @@ var paths = {
     js: 'public/js/**/*.js',
     images: 'public/images/**/*'
 };
-//Óï·¨¼ì²é
+//è¯­æ³•æ£€æŸ¥
 gulp.task('jshint', function () {
     return gulp.src(paths.js)
         .pipe(jshint())
         .pipe(jshint.reporter('default'));
 });
-//Ñ¹Ëõjs
+//å‹ç¼©js
+//mangle: {except: ['define', 'require', 'module', 'exports']} æ’é™¤ä¸å‹ç¼©çš„å˜é‡
 gulp.task('compressJS', ['scripts'], function(){
     return gulp.src(paths.js)
-        .pipe(uglify())
-        .pipe(rev())//P.S:ÒÑĞŞ¸Ägulp-revÔ´Âë£¬²»Éú³ÉMD5!
+        .pipe(uglify({
+            mangle: {except: ['define', 'require', 'module', 'exports']}
+            //mangle: {except: ["require"]}
+        }))
+        .pipe(rev())//P.S:å·²ä¿®æ”¹gulp-revæºç ï¼Œä¸ç”ŸæˆMD5!
         .pipe(gulp.dest('dist/js'))
         .pipe(rev.manifest())
         .pipe(gulp.dest('rev/js'));
 });
-// ºÏ²¢Ö¸¶¨js
+// åˆå¹¶æŒ‡å®šjs
 gulp.task('scripts', function(){
-    return  gulp.src(['public/js/lib/jquery-2.1.1.min.js', 'public/js/lib/sea.js', 'public/js/iscroll.js', 'public/js/common.js']) //¿ÉÒÔºÏ²¢ºóÔÚÌá½»µ½cdn
+    return  gulp.src(['public/js/lib/jquery-2.1.1.min.js', 'public/js/lib/sea.js', 'public/js/iscroll.js', 'public/js/common.js']) //å¯ä»¥åˆå¹¶ååœ¨æäº¤åˆ°cdn
         .pipe(concat('all_common.js'))
         .pipe(gulp.dest('public/js'))
 });
-//Ñ¹ËõÑùÊ½
+//å‹ç¼©æ ·å¼
 gulp.task('minifyCss',['concat'],  function () {
     return gulp.src(paths.css)
+        //.pipe(spriter({
+        //    'spriteSheet': 'dist/images/spritesheet.png',
+        //    'pathToSpriteSheetFromCSS': '../images/spritesheet.png'
+        //}))
         .pipe(minifyCSS())
         .pipe(rev())
         .pipe(gulp.dest('dist/css'))
         .pipe(rev.manifest())
         .pipe(gulp.dest('rev/css'));
 });
-//ºÏ²¢Ö¸¶¨css
+//åˆå¹¶æŒ‡å®šcss
 gulp.task('concat', function() {
-    return gulp.src(['public/css/base.css', 'public/css/layout.css'])    //- ĞèÒª´¦ÀíµÄcssÎÄ¼ş£¬·Åµ½Ò»¸ö×Ö·û´®Êı×éÀï
-        .pipe(concat('all_common.css'))                            //- ºÏ²¢ºóµÄÎÄ¼şÃû
+    return gulp.src(['public/css/base.css', 'public/css/layout.css'])    //- éœ€è¦å¤„ç†çš„cssæ–‡ä»¶ï¼Œæ”¾åˆ°ä¸€ä¸ªå­—ç¬¦ä¸²æ•°ç»„é‡Œ
+        .pipe(concat('all_common.css'))                            //- åˆå¹¶åçš„æ–‡ä»¶å
         .pipe(gulp.dest('public/css'))
 });
-// Ñ¹ËõÍ¼Æ¬
+// å‹ç¼©å›¾ç‰‡
 gulp.task('images', function () {
     return gulp.src(paths.images)
         .pipe(imagemin({
@@ -66,7 +78,7 @@ gulp.task('images', function () {
         .pipe(rev.manifest())
         .pipe(gulp.dest('rev/images'));
 });
-// ¸ù¾İ±í½øĞĞ×Ô¶¯Ìæ»»Â·¾¶
+// æ ¹æ®è¡¨è¿›è¡Œè‡ªåŠ¨æ›¿æ¢è·¯å¾„
 gulp.task('rev', ['compressJS', 'minifyCss', 'images'], function () {
     return gulp.src(['rev/**/*.json', 'views_dev/**/*.ejs'])
         .pipe( revCollector({
@@ -80,26 +92,42 @@ gulp.task('rev', ['compressJS', 'minifyCss', 'images'], function () {
                 }
             }
         }) )
-        .pipe(utf8Convert({  // ·ÀÖ¹ÂÒÂë
+        .pipe(utf8Convert({  // é˜²æ­¢ä¹±ç 
             encNotMatchHandle:function (file) {
-                console.log(file + " ±àÂë²»ÕıÈ·£¬ÇëĞŞ¸Ä£¡");
+                console.log(file + " ç¼–ç ä¸æ­£ç¡®ï¼Œè¯·ä¿®æ”¹ï¼");
             }
         }))
         .pipe( gulp.dest('views') );
 });
-//×Ô¶¯¼à¿Øjs.css£¬images±ä»¯
+
+// gulp copyå¤åˆ¶publicå…¶ä»–æ–‡ä»¶åˆ°distç›®å½•
+gulp.task('copyFile1', function(){
+    return gulp.src(['public/*.html', 'public/*.ico'])
+        .pipe(rename({dirname: ''}))
+        .pipe(gulp.dest('dist/'))
+});
+//'public/iconfont/*'
+// gulp copyå¤åˆ¶publicå…¶ä»–æ–‡ä»¶åˆ°distç›®å½•
+gulp.task('copyFile2', function(){
+    return gulp.src(['public/iconfont/*'])
+        .pipe(rename({dirname: ''}))
+        .pipe(gulp.dest('dist/iconfont/'))
+});
+
+//è‡ªåŠ¨ç›‘æ§js.cssï¼Œimageså˜åŒ–
 gulp.task('auto', function(event){
     console.log('type:' +event.type + 'path:'+event.path);
     gulp.watch(paths.js, ['compressJS','rev']);
     gulp.watch(paths.css, ['minifyCss','rev']);
     gulp.watch(paths.images, ['images','rev']);
 });
-// Çå³ı
+// æ¸…é™¤
 gulp.task('clean', function(){
-    gulp.src(['dist/', 'rev/','views/','public/js/all_common.js','public/css/all_common.css'], {read: false})
+    return gulp.src(['dist/', 'rev/','public/js/all_common.js','public/css/all_common.css'], {read: false})
         .pipe(clean());
 });
 gulp.task('default',['clean'], function(){
-    gulp.start('compressJS',  'minifyCss', 'images', 'rev', 'auto');
+   // gulp.start('compressJS',  'minifyCss', 'images', 'rev', 'auto');
+    gulp.start('compressJS',  'minifyCss', 'images', 'copyFile1','copyFile2', 'rev');
 });
 //gulp.task('default',[ 'compressJS',  'minifyCss', 'images', 'rev', 'auto']);
